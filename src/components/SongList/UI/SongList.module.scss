@@ -1,0 +1,36 @@
+.songList {
+  margin: auto;
+  width: 50%;
+  color: #666666;
+ 
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.songHeader {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+  strong{
+    display: inline-block;
+  };
+  background-color: #EEEEEE;
+  height: 30px;
+}
+
+.songName{
+  p{
+    padding-left: 65px;
+  }
+  width: 400px;
+}
+
+.artistName{
+  width: 300px;
+}

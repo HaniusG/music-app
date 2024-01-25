@@ -1,0 +1,51 @@
+.song {
+  display: flex;
+  button {
+    color: #666666;
+    background: none;
+    border: none;
+  }
+  padding: 5px;
+  color: #666666;
+  transition: all 0.2s;
+  &:hover {
+    background-color: #eeeeee;
+  }
+
+  //styles for the selected song
+  &.songSelected {
+    .songNameX {
+      color: #64addf;
+    }
+
+    
+  }
+
+  //styles for different parts of the song row
+  & .songName {
+    width: 400px;
+    display: flex;
+
+    .buttonDiv {
+      margin-right: 17px;
+    }
+  }
+  .playStopBtn {
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s; 
+    &:hover{
+      color: #64addf;
+    }
+  }
+
+  & .artistName {
+    width: 300px;
+  }
+
+  & .trackNumber {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

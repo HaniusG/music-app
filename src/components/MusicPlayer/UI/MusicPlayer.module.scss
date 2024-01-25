@@ -1,0 +1,93 @@
+.audioPlayer {
+  text-align: center;
+  margin: 20px;
+  position: absolute;
+  bottom: 30px;
+  left: 30%;
+  width: 700px;
+}
+
+.controls button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  font-size: 25px;
+  color: #4a9cee;
+  background: none;
+  transition: color 0.3s, background 0.3s; 
+}
+.controls button:hover {
+
+  color:#3c79b6;
+ 
+}
+
+
+
+.playbar {
+  margin-top: 10px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+
+
+
+$primaryColor: #0e6dac;
+$secondaryColor: #2c3e50;
+$sliderTrackColor: linear-gradient(to left, $primaryColor, #c3e3e6);
+
+.volumeControl {
+  display: flex;
+  align-items: center;
+
+  width:150px;
+  margin: 0 40%;
+  label {
+    font-size:25px;
+    margin-top: 10px;
+    margin-right: 4px;
+    margin-bottom: 8px;
+    color: $secondaryColor;
+  }
+  input {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    border-radius: 4px;
+    background: $sliderTrackColor;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: $primaryColor;
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      border: none;
+      border-radius: 50%;
+      background: $primaryColor;
+      cursor: pointer;
+    }
+  }
+}
+
