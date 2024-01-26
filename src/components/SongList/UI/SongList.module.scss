@@ -1,12 +1,22 @@
+
 .songList {
   margin: auto;
   width: 50%;
   color: #666666;
  
 }
+@media (max-width: 1370px) {
+  .songList {
+    margin: auto;
+    width: 100%;
+    color: #666666;
+  }
+}
+
 
 
 ul {
+  width: 100%;
   list-style: none;
   padding: 0;
 }

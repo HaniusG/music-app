@@ -12,6 +12,22 @@ background: linear-gradient(0deg, rgba(234,251,250,1) 0%, rgba(255,254,254,0.986
     justify-content: space-between;
 }
 
+@media (max-width: 1370px) {
+    .musicControl {
+        margin: auto;
+        width: 100%;
+        margin-top: 50px;
+        border: 1px solid #AFAFAF;
+        padding: 8px;
+        border-radius: 5px;
+        background: rgb(234,251,250);
+        background: linear-gradient(0deg, rgba(234,251,250,1) 0%, rgba(255,254,254,0.9864320728291317) 100%, rgba(255,255,255,1) 100%);
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+  }
+
 .controlButtons{
     display: flex;
     width: 300px;
