@@ -1,10 +1,11 @@
 .audioPlayer {
   text-align: center;
-  margin: 20px;
   position: absolute;
   bottom: 30px;
-  left: 30%;
-  width: 700px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  margin: 20px auto;
 }
 
 .controls button {
@@ -24,8 +25,6 @@
  
 }
 
-
-
 .playbar {
   margin-top: 10px;
 }
@@ -44,16 +43,19 @@ $sliderTrackColor: linear-gradient(to left, $primaryColor, #c3e3e6);
 .volumeControl {
   display: flex;
   align-items: center;
+  justify-content: center; /* Center horizontally */
 
-  width:150px;
-  margin: 0 40%;
+  width: 150px;
+  margin: auto; /* Center vertically */
+
   label {
-    font-size:25px;
+    font-size: 25px;
     margin-top: 10px;
     margin-right: 4px;
     margin-bottom: 8px;
     color: $secondaryColor;
   }
+
   input {
     width: 100%;
     -webkit-appearance: none;
@@ -63,7 +65,6 @@ $sliderTrackColor: linear-gradient(to left, $primaryColor, #c3e3e6);
     background: $sliderTrackColor;
     outline: none;
     opacity: 0.7;
-    -webkit-transition: 0.2s;
     transition: opacity 0.2s;
 
     &:hover {
@@ -90,4 +91,3 @@ $sliderTrackColor: linear-gradient(to left, $primaryColor, #c3e3e6);
     }
   }
 }
-
