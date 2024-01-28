@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./SongRow.module.scss";
-import { SongProps } from "../../../redux/songs/songsSlice"; 
+import { SongProps, setLike } from "../../../redux/songs/songsSlice"; 
 import { FaPause, FaPlay, FaHeart, FaCheck, FaShare, FaCaretDown } from "react-icons/fa";
 import { TbGridDots } from "react-icons/tb";
 import { useDispatch, useSelector } from "react-redux";
@@ -48,9 +48,9 @@ const SongRow: React.FC<SongRowProps> = ({ song }) => {
 
       <div className={styles.trackNumber}>
         <span>{song.trackNumber}</span>
-        <div>
-          <button><FaHeart /></button>
-          <button><FaCheck /></button>
+        <div className={styles.buttons}>
+          <button onClick={()=>{dispatch(setLike(song.id))}} style={song.liked ? {color: "rgb(37, 141, 201)"}:{}}><FaHeart /></button>
+          <button ><FaCheck /></button>
           <button><FaShare /></button>
           <button><FaCaretDown /></button>
         </div>

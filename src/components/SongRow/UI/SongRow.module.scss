@@ -4,6 +4,7 @@
     color: #666666;
     background: none;
     border: none;
+    cursor: pointer;
   }
   padding: 5px;
   color: #666666;
@@ -22,7 +23,7 @@
   }
 
   //styles for different parts of the song row
-  & .songName {
+  .songName {
     width: 400px;
     display: flex;
 
@@ -39,13 +40,16 @@
     }
   }
 
-  & .artistName {
+  .artistName {
     width: 300px;
   }
 
-  & .trackNumber {
+  .trackNumber {
     width: 260px;
     display: flex;
     justify-content: space-between;
+   
   }
 }
+
+
