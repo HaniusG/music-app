@@ -113,7 +113,32 @@ const MusicPlayer: React.FC = () => {
       setVolume(0.5)
     }
   }
+
+  //move to the next track when the current track ends
+  useEffect(() => {
+    const handleEnded = () => {
+      const index = songs.findIndex((song) => song.id === chosenSong?.id);
+      dispatch(setPlaying(true));
   
+      if (index !== songs.length - 1) {
+        dispatch(changeSong(songs[index + 1]));
+      } else {
+        dispatch(changeSong(songs[0]));
+      }
+    };
+  
+    if (audioRef.current) {
+      audioRef.current.addEventListener("ended", handleEnded);
+    }
+  
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.removeEventListener("ended", handleEnded);
+      }
+    };
+  }, [isPlaying, chosenSong, dispatch, songs]);
+
+
   //render
   return (
     <div className={styles.audioPlayer}>

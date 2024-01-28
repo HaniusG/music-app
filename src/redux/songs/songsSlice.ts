@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { useEffect } from "react";
 
 //interface for objects of the song array
 export interface SongProps {
@@ -35,6 +36,8 @@ const initialState:  SongListProps = {
   chosenSong: null,
   isPlaying: false,
 };
+
+
 
 
 
